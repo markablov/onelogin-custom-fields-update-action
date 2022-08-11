@@ -12,6 +12,10 @@ This action uses specified file to update Custom Fields for users in OneLogin
 
 **Required** Secret for OneLogin API
 
+### `apiRegion`
+
+**Required** Region for OneLogin API, could be `eu` or `us`
+
 ### `valuesFilePath`
 
 **Required** Path to the file that contains values of custom fields for users
@@ -26,14 +30,14 @@ Only `json5` is supported.
 [
   {
      // identifier for user
-     username: 'john'
+     username: 'john',
      // custom fields, that would by synced
      height: 180,
      size: 'XL'
   },
   {
     // identifier for user
-    username: 'jane'
+    username: 'jane',
     // custom fields, that would by synced
     height: 150,
     size: 'XXS'
@@ -48,5 +52,6 @@ uses: actions/onelogin-custom-fields-update-action@v1.0
 with:
   apiClientId: '123abc'
   apiSecret: 'abc123'
-  valuesFilePath: '../users.json'
+  apiRegion: 'eu'
+  valuesFilePath: '../users.json5'
 ```

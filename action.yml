@@ -7,6 +7,9 @@ inputs:
   apiSecret:
     description: 'Secret for OneLogin API'
     required: true
+  apiRegion:
+    description: 'Region for OneLogin API'
+    required: true
   valuesFilePath:
     description: 'Path to the file that contains values of custom fields for users'
     required: true
