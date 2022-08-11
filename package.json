@@ -1,0 +1,43 @@
+{
+  "name": "onelogin-custom-fields-update-action",
+  "version": "1.0.0",
+  "author": "Mark Ablovatskii <mark.ablov@gmail.com>",
+  "license": "MIT",
+  "description": "GitHub Action to update Custom Fields for users in OneLogin",
+  "keywords": [
+    "OneLogin",
+    "Github Action",
+    "Custom Fields"
+  ],
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint ./src",
+    "prepare": "husky install",
+    "build": "ncc build src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markablov/onelogin-custom-fields-update-action.git"
+  },
+  "homepage": "https://github.com/markablov/onelogin-custom-fields-update-action",
+  "bugs": {
+    "url": "https://github.com/markablov/onelogin-custom-fields-update-action/issues"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.18.9",
+    "@babel/plugin-syntax-class-properties": "^7.12.13",
+    "@vercel/ncc": "^0.34.0",
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.1"
+  }
+}

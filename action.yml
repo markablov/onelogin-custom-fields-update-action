@@ -1,0 +1,19 @@
+name: 'OneLogin Custom Fields updater'
+description: 'Update Custom Fields for users at OneLogin with specified values'
+inputs:
+  apiClientId:
+    description: 'ClientID for OneLogin API'
+    required: true
+  apiSecret:
+    description: 'Secret for OneLogin API'
+    required: true
+  valuesFilePath:
+    description: 'Path to the file that contains values of custom fields for users'
+    required: true
+  valuesFileFormat:
+    description: 'Format of the file that contains values of custom fields for users'
+    required: false
+    default: 'json5'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
